@@ -77,7 +77,7 @@ And this one for n=14:
     :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE 2. Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In your final solution for this problem,
@@ -86,17 +86,16 @@ And this one for n=14:
 
     for k in range(n):
         for _ in range(n-k-1):
-            print('x', end='')
+            print(' ', end='')
         for j in range(1, k+2, 1):
-            print((k + j) % 10, end='')
+            print((j) % 10, end='')
+        print(' ', end='')
+        for _ in range(k+2):
+            print('*', end='')
+        print(' ', end='')
+        for p in range(n-k, 0, -1):
+            print((p) % 10, end='')
         print()
-        # for _ in range(n):
-        #     print((k+1) % 10, end='')
-        # print()
-        # for _ in range(k+2):
-        #     print('*',end='')
-        # for _ in range(n-k-1):
-        #     print((n-k-1) % 10)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
